@@ -1,0 +1,114 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+        li {
+            list-style: none;
+        }
+        .box {
+            border: 1px solid #ccc;
+            width: 900px;
+            height: 800px;
+            margin: 30px auto;
+        }
+        .top {
+            height: 133px;
+            background-image: url(/img/show.png);     
+            text-align: center;     
+        }
+        .top p {
+            font-size: 25px;
+            color:#ffffff;
+            cursor: not-allowed;
+        }
+        .top input{
+            width: 300px;
+            height: 30px;
+            border: 1px solid #ccc;
+            outline: none;
+        }
+        .top span {
+            font-size: 20px;
+            cursor: pointer;
+        }
+        .left {
+            width: 300px;
+            height: 600px;
+            float: left;
+            color: #ccc;
+            overflow:auto;
+            font-size:16px;
+            
+        }
+        .left p{
+            text-align: left;
+        }
+        .left p a {
+            text-decoration: none;
+            color: red;
+            border: 1px solid;
+            border-radius: 50%;
+            
+        }
+        .left p:hover {
+            background-color: rgb(113, 184, 247);
+            text-indent: 2em;
+            transition: all .4s linear;
+        }
+        .right {
+            width: 600px;
+            height: 600px;
+            float: right;
+            overflow: auto;
+        }
+        .right img{
+            display: inline-block;
+            width: 150px;
+            height: 150px;
+            margin: 200px 10px 10px 20px;
+            border-radius: 50%;
+        }
+        /* 播放动画 */
+        .playing{
+            transition: all 30s linear;
+            transform: rotate(360deg);
+        }
+        .right .user{
+            float:right;
+            width: 400px;
+            height: 600px;
+        }
+        .right .user img {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background-color: blue;
+            margin: 1px 0 10px 20px;
+
+        }
+        .user ul li {
+            margin-bottom: 12px;
+        }
+        .user span{
+            color: red;
+        }
+        .bottom {
+            clear: both;
+            width: 900px;
+            text-align: center;
+            color: #ccc;
+        }
+/*遮罩层实现*/
+.mv{
+	width: 30%;
+	height: 300px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	padding: 20px;
+	background: #ffffff;
+	border-radius: 10px;
+	text-align: right;
+}
