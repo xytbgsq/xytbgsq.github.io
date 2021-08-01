@@ -1,1 +1,146 @@
+* {
+    margin: 0;
+    padding: 0;
+}
 
+li {
+    list-style: none;
+}
+
+.box {
+    position: relative;
+    border: 1px solid #ccc;
+    width: 1000px;
+    height: 810px;
+    margin: 30px auto;
+}
+
+.top {
+    height: 133px;
+    background-image: url(../img/show.png);
+    text-align: center;
+}
+
+.top p {
+    font-size: 25px;
+    color: #ffffff;
+    cursor: not-allowed;
+}
+
+.top input {
+    width: 300px;
+    height: 30px;
+    border: 1px solid #ccc;
+    outline: none;
+}
+
+.top span {
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.left {
+    width: 300px;
+    height: 600px;
+    float: left;
+    color: #ccc;
+    overflow: auto;
+    font-size: 16px;
+}
+
+.left p {
+    text-align: left;
+}
+
+.left p a {
+    text-decoration: none;
+    color: red;
+    border: 1px solid;
+    border-radius: 50%;
+}
+
+.left p:hover {
+    background-color: rgb(113, 184, 247);
+    text-indent: 2em;
+    transition: all .4s linear;
+}
+
+.right {
+    width: 600px;
+    height: 600px;
+    float: right;
+    overflow: auto;
+}
+
+.fengmian {
+    position: absolute;
+    top: 300px;
+    right: 451px;
+    width: 206px;
+    height: 205px;
+    background: url(../img/coverall.png);
+    background-position: -140px -580px;
+}
+
+.fengmian img {
+    position: absolute;
+    top: 38px;
+    left: 38px;
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    border: 0;
+}
+
+.playing {
+    animation: move 3s linear infinite;
+}
+
+@keyframes move {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.right .user {
+    float: right;
+    width: 400px;
+    height: 600px;
+}
+
+.right .user img {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background-color: blue;
+    margin: 1px 0 10px 20px;
+}
+
+.user ul li {
+    margin-bottom: 12px;
+}
+
+.user span {
+    color: red;
+}
+
+.bottom {
+    clear: both;
+    width: 100%;
+    text-align: center;
+    color: #ccc;
+}
+
+.mv {
+    width: 30%;
+    height: 300px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 10px;
+    text-align: right;
+}
