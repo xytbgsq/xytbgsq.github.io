@@ -1,1 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <title>音乐播放器</title>
+    <link rel="stylesheet" href="css/index.css">
+    <script src="/js/aixin.js"></script>
+</head>
+
+<body>
+    <div id="app" @click="hidden">
+        <div class="box">
+            <div class="fengmian" v-show="isShowfm">
+                <img :src="fengmianurl" :class="{playing:isShow}">
+            </div>
+            <div class="mv" v-if="isShowmv">
+                <video :src="mvUrl" controls="controls" width="500"></video>
+            </div>
+            <div class="top">
+                <p>音乐播放器</p>
+                <input type="text" v-model="keywords" @keyup.enter="getkeywords"> <span @click="getkeywords">🔍</span> </div>
+            <div class="left">
+                <p v-for="item in arr"><a href="#" @click="geturl(item.id)">▶</a>{{item.name}}<a href="#" @click="getmvUrl(item.mvid)" v-show="item.mvid!=0">mv</a></p>
+            </div>
+            <div class="right">
+                <div class="user">
+                    <ul>
+                        <li v-for="item in userarr"><span>{{item.user.nickname}}</span>
+                            <p>{{item.content}}</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="bottom">
+                <audio class="bottom" :src="url" @play="play" @pause="pause" controls autoplay loop></audio>
+                <p>2020.6.25@by梦迹余生</p>
+            </div>
+        </div>
+    </div>
+    <script src="js/index.js"></script>
+</body>
+
+</html>
