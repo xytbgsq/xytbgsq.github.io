@@ -100,7 +100,7 @@ section img {
     line-height: 50px;
     text-align: center;
     font-family: '宋体';
-    animation: move 1s linear 30s infinite;
+    animation: move 10s linear 30s;
 }
 
 .pic:hover div {
@@ -109,15 +109,15 @@ section img {
 
 @keyframes move {
     0% {
-        transform: rotate(1800deg);
+        transform: rotate(180deg);
         background-color: #fff;
     }
     50% {
-        transform: rotate(2700deg);
+        transform: rotate(270deg);
         background-color: #ccc;
     }
     100% {
-        transform: rotate(3600deg);
+        transform: rotate(360deg);
     }
 }
 
